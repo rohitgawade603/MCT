@@ -78,14 +78,14 @@ body {
   left: 1302px;
 }
 
-.rectangle-2 img {
+.rectangle-2{
   position: absolute;
   width: 100%;
   height: 606px;
   left: 0px;
   top: 148px;
 
-  /* background: url(.jpg), #000000; */
+  background: url(./Images/Rectangle\ 2.png), #000000;
 }
 
 .rectangle-2 h1 {
@@ -314,18 +314,20 @@ body {
   z-index: 1;
 }
 
-.union img {
+.union img{
   position: absolute;
   width: 500px;
   height: 719px;
   /* left: 942px; */
+  border: none;
   top: 768px;
   right: 0;
-  /* background: #ffffff; */
+  background: url(./Images/Union.png), black;
+  z-index: 0;
 }
 
-
-/* .polygon-5 img{
+/* 
+.polygon-5 img{
   position: absolute;
   width: 1381px;
   height: 409px;
@@ -344,8 +346,8 @@ body {
   left: 1162px;
   top: 768px;
 
-  background: #292929;
-} */
+  /* background: #292929;
+} */ */
 
 /* .eclipse {
   position: absolute;
