@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <h3 id="app_heading">QuizApp</h3>
+    </nav>
+
+    <section class="section1">
+        <div class="main_container">
+            <img id="quiz_logo" src="./images/quiz logo.png" alt="">
+            <div class="sub_container">
+                <h3 class="heading">The Ultimate Trivia Quiz</h3>
+                <hr>
+                <div class="select">
+                    <select id="category">
+                        <option class="option" value="0">Any Category</option>
+                        <option class="option" value="9">General Knowledge</option>
+                        <option class="option" value="17">Science & Nature</option>
+                        <option class="option" value="18">Science: Computers</option>
+                        <option class="option" value="19">Science: Mathematics</option>
+                    </select>
+                    <select id="noOfQue">
+                        <option value="0">Select No. of Que</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        
+                    </select>
+                    <select id="difficulty">
+                        <option value="0">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <select id="type">
+                        <option value="">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True/False</option>
+                    </select>
+                </div>
+                
+                <div class="timing">
+                    <select name="" id="hours_input">
+                        <option value="0">Select Hours</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="" id="mins_input">
+                        <option value="0">Select Min</option>
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                    </select>
+                    <!-- <select name="" id="secs_input">
+                        <option value="0">Select Sec</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select> -->
+                </div>
+                <div id="button">
+                    <!-- <a href="./play.html"><button id="play_button"><i id="play_icon" class="fa-solid fa-play"></i>Play Now</button></a> -->
+                    <button id="play_button"><i id="play_icon" class="fa-solid fa-play"></i>Play Now</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="section2">
+        <div class="quiz_container">
+            <div id="queNo_timing">
+                <div class="queNo">
+                    <i id="info_icon" class="fa-solid fa-circle-info"></i><h3 id="que_no">Question No.1 of 5</h3>
+                </div>
+                <div class="timing_container">
+                    <table>
+                        <tr>
+                            <td id="hours"></td>
+                            <td id="mins"></td>
+                            <td id="secs"></td>
+                        </tr>
+                    </table>
+                   
+                </div>
+            </div>
+            <div id="que_container">
+                <h5 id="que"></h5>
+            </div>
+            <div id="answers_container">
+                <h5>Please choose one of the following answers:</h5>
+                <hr>
+                <div class="answers">
+                    <a class="options" style="border-top: none;"></a>
+                    <a class="options"></a>
+                    <a class="options"></a>
+                    <a class="options" style="border-bottom: none;"></a>
+                </div>
+                <hr>
+            </div>
+            <div class="next_btn_container">
+                <button id="next_btn">Next</button>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="section3">
+        <div class="stats_qna">
+                <a id="stats_btn">Stats</a>
+                <!-- <a id="qna_btn">QNA</a> -->
+        </div>
+
+        <div class="stats_container">
+                <div class="result_div result_subcontainer">
+                    <h2 id="result"></h2>
+                </div>
+                <div class="grade_div result_subcontainer">
+                    <h3 id="grade"></h3>
+                </div>
+                <div class="other result_subcontainer">
+                    <h5 id="total_que"></h5>
+                </div>
+                <div class="other result_subcontainer">
+                    <h5 id="correct_ans"></h5>
+                </div>
+                <div class="other result_subcontainer">
+                    <h5 id="score"></h5>
+                </div>
+                <div class="other result_subcontainer">
+                    <h5 id="passing_score">Passing Score: 60%</h5>
+                </div>
+                <!-- <div class="other result_subcontainer">
+                    <h5 id="time_taken">Time Taken: 0h 44m 34s</h5>
+                </div> -->
+                <div class="result_container_btns">
+                    <!-- <button id="playAgain_btn"><i id="playAgain_icon" class="fa-solid fa-rotate-right"></i>Play Again</button> -->
+                    <button id="backToHome_btn"><i id="backHome_icon" class="fa-solid fa-house"></i>Back to Home</button>
+                </div>
+        </div>
+
+        <!-- <div class="qna_container">
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Questions</th>
+                    <th>Your Answers</th>
+                    <th>Correct Answers</th>
+                    <th>points</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Which of these is NOT a map included in the game Counter-Strike: Global Offensive?</td>
+                    <td>Cache</td>
+                    <td>Oilrig</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div> -->
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
