@@ -273,7 +273,7 @@ function resultDisplay(arr, corr_ans, data) {
     total_que.innerHTML = `Total Question: ${noOfQueValue}`;
     let totalScore = (user_corr_ans / corr_ans.length) * 100;
     score.innerHTML = `Your Score: ${totalScore}%`
-    if(totalScore > 60){
+    if(totalScore >= 60){
         grade.innerHTML = `Grade: A`;
         result.innerHTML = 'Passed';
     }else{
